@@ -17,7 +17,7 @@
 
     <v-list>
 
-          <v-list-item link>
+          <v-list-item >
             <v-list-item-content>
               <v-list-item-title class="title">
                 <v-list-item-avatar>

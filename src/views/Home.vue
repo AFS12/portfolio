@@ -1,14 +1,12 @@
 <template>
   <v-app>
-    <v-main>
-      <v-app-bar
+    <v-app-bar
         id="appbar"
         dense
       >
         <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <v-bar-title>Arthur Ayres Dev</v-bar-title>
+        <v-toolbar-title name="bar">Arthur Ayres Dev</v-toolbar-title>
       </v-app-bar>
-      
       <v-navigation-drawer
       v-model="drawer"
       absolute
@@ -41,14 +39,13 @@
         dense
       >
         <v-list-item-group
-          v-model="group"
           active-class="deep-purple--text text--accent-4"
         >
-          <v-list-item>
+          <v-list-item @click="$vuetify.goTo(target2, options)">
             <v-list-item-title>Projects</v-list-item-title>
           </v-list-item>
 
-          <v-list-item>
+          <v-list-item @click="$vuetify.goTo(target3, options)">
             <v-list-item-title>About</v-list-item-title>
           </v-list-item>
 
@@ -58,23 +55,9 @@
         </v-list-item-group>
       </v-list>
     </v-navigation-drawer>
-    
-      <div id="up">
-        <v-btn
-        class="mx-2"
-        fab
+    <v-parallax
         dark
-        color="indigo"
-        @click="$vuetify.goTo(target, options)"
-        ><v-icon dark>
-        mdi-arrow-up-circle
-        </v-icon>
-        </v-btn>
-      </div>
-      <v-container fluid>
-      <v-parallax
-        dark
-        height="900"
+        height="800"
         src="../assets/background.jpg"
       >
   <br>
@@ -95,6 +78,25 @@
       </v-col>
     </v-row>
   </v-parallax>
+    <v-main>
+      
+      
+      
+    
+      <div id="up">
+        <v-btn
+        class="mx-2"
+        fab
+        dark
+        color="indigo"
+        @click="$vuetify.goTo(target, options)"
+        ><v-icon dark>
+        mdi-arrow-up-circle
+        </v-icon>
+        </v-btn>
+      </div>
+      <v-container fluid>
+      
       <br>
       <br>
       <v-row>
@@ -113,7 +115,7 @@
             outlined
             shaped
           >
-            <v-card-title><h3>Projects</h3></v-card-title>
+            <v-card-title id="proj"><h3>Projects</h3></v-card-title>
             <h1>FIASHJUIOPDFAHJS</h1>
             <h1>FIASHJUIOPDFAHJS</h1>
             <h1>FIASHJUIOPDFAHJS</h1>
@@ -127,9 +129,9 @@
             shaped
             
           >
-            <v-card-title><h3>About</h3></v-card-title>
+            <v-card-title id="about"><h3>About</h3></v-card-title>
             <v-layout justify-center>
-              <v-img src="../assets/me.jpg" max-width="400" max-height="400" ></v-img>
+              <v-img src="../assets/me.jpg" max-width="300" max-height="300" ></v-img>
             </v-layout>
 
             <br>
@@ -181,6 +183,20 @@ export default {
     }
   },
   computed:{
+    target3 () {
+        this.closeDrawer();
+        var myElement = document.getElementById('about');
+        var posicoes = myElement.getBoundingClientRect();
+        // console.log(posicoes.y);
+        return posicoes.y
+      },
+    target2 () {
+        this.closeDrawer();
+        var myElement = document.getElementById('proj');
+        var posicoes = myElement.getBoundingClientRect();
+        // console.log(posicoes.y);
+        return posicoes.y
+      },
     target () {
         return 0
       },
@@ -196,15 +212,8 @@ export default {
     link(){
       window.location.href = 'https://api.whatsapp.com/send?phone=5582996872879';
     },
-    changeColor() {
-      if (
-        document.body.scrollTop > 100 ||
-        document.documentElement.scrollTop > 100
-      ) {
-        this.bg = 'white';
-      } else {
-        this.bg = 'transparent';
-      }
+    closeDrawer() {
+      this.drawer = !this.drawer;
     },
   },
 }

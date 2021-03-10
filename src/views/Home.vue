@@ -213,7 +213,6 @@ export default {
         return posicoes.y
       },
     target () {
-        this.closeUp();
         return 0
       },
       options () {
@@ -239,9 +238,6 @@ export default {
     },
     closeDrawer() {
       this.drawer = !this.drawer;
-    },
-    closeUp() {
-      this.expand = !this.expand;
     },
   },
 }

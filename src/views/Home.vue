@@ -80,21 +80,29 @@
   </v-parallax>
     <v-main>
       
-      
-      
-    
-      <div id="up">
-        <v-btn
-        class="mx-2"
-        fab
-        dark
-        color="indigo"
-        @click="$vuetify.goTo(target, options)"
-        ><v-icon dark>
-        mdi-arrow-up-circle
-        </v-icon>
-        </v-btn>
-      </div>
+      <v-row
+      justify="center"
+  
+      style="min-height: 160px;"
+    >
+      <v-col class="shrink">
+        <v-expand-transition>
+          <v-card
+           id="up"
+            v-show="expand"
+            @click="$vuetify.goTo(target, options)"
+            color="indigo"
+            height="40"
+            width="50"
+          >
+            <v-icon x-large dark>
+              mdi-arrow-up-circle
+            </v-icon>
+          </v-card>
+        </v-expand-transition>
+      </v-col>
+    </v-row>
+
       <v-container fluid>
       
       <br>
@@ -116,11 +124,11 @@
             shaped
           >
             <v-card-title id="proj"><h3>Projects</h3></v-card-title>
-            <h1>FIASHJUIOPDFAHJS</h1>
-            <h1>FIASHJUIOPDFAHJS</h1>
-            <h1>FIASHJUIOPDFAHJS</h1>
-            <h1>FIASHJUIOPDFAHJS</h1>
-            <h1>FIASHJUIOPDFAHJS</h1>
+            <h1>Projetos aqui</h1>
+            <h1>Projetos aqui</h1>
+            <h1>Projetos aqui</h1>
+            <h1>Projetos aqui</h1>
+            <h1>Projetos aqui</h1>
           </v-card>
             <br><br>
           <v-card
@@ -178,9 +186,16 @@ export default {
   data(){
     return{
       drawer: false,
+      expand: false,
       easing: 'easeInOutCubic',
       easings: Object.keys(easings),
     }
+  },
+  created () {
+    window.addEventListener('scroll', this.handleScroll);
+  },
+  destroyed () {
+    window.removeEventListener('scroll', this.handleScroll);
   },
   computed:{
     target3 () {
@@ -198,6 +213,7 @@ export default {
         return posicoes.y
       },
     target () {
+        this.closeUp();
         return 0
       },
       options () {
@@ -209,11 +225,23 @@ export default {
       },
   },
   methods: {
+    handleScroll () {
+      // Any code to be executed when the window is scrolled
+      console.log();
+      if (window.scrollY > 200) {
+        this.expand = true;
+      }else{
+        this.expand = false;
+      }
+    },
     link(){
       window.location.href = 'https://api.whatsapp.com/send?phone=5582996872879';
     },
     closeDrawer() {
       this.drawer = !this.drawer;
+    },
+    closeUp() {
+      this.expand = !this.expand;
     },
   },
 }
@@ -228,7 +256,7 @@ export default {
   margin-top: 5px;
   margin-left: 30px;
   z-index: 10;
-  right: 2rem;
+  right: 3rem;
   bottom: 2rem;
   position: fixed;
 }

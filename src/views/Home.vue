@@ -57,7 +57,7 @@
     </v-navigation-drawer>
     <v-parallax
         dark
-        height="800"
+        height="1000"
         src="../assets/background.jpg"
       >
   <br>

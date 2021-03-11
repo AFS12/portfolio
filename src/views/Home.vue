@@ -30,9 +30,11 @@
           </v-list-item>
         </v-list>
 
+        <br>
         <v-divider></v-divider>
         <v-divider></v-divider>
         <v-divider></v-divider>
+        <br>
 
       <v-list
         nav
@@ -54,6 +56,33 @@
           </v-list-item>
         </v-list-item-group>
       </v-list>
+
+      <br>
+      <v-divider></v-divider>
+      <v-divider></v-divider>
+      <v-divider></v-divider>
+      <br>
+
+      <v-row>
+        <v-col cols="12" md="4">
+        </v-col>
+        
+        <v-col cols="12" md="4">
+          <v-btn
+            elevation="8"
+            fab
+            outlined
+            @click="linkedin"
+          >
+            <v-icon x-large dark>
+              mdi-linkedin
+            </v-icon>
+          </v-btn>
+        </v-col>
+
+        <v-col cols="12" md="4">
+        </v-col>
+      </v-row>
     </v-navigation-drawer>
     <v-parallax
         dark
@@ -92,8 +121,9 @@
             v-show="expand"
             @click="$vuetify.goTo(target, options)"
             color="indigo"
+            rounded
             height="40"
-            width="50"
+            width="40"
           >
             <v-icon x-large dark>
               mdi-arrow-up-circle
@@ -234,7 +264,10 @@ export default {
       }
     },
     link(){
-      window.location.href = 'https://api.whatsapp.com/send?phone=5582996872879';
+      window.open('https://api.whatsapp.com/send?phone=5582996872879');
+    },
+    linkedin(){
+      window.open('https://www.linkedin.com/in/arthur-mendon%C3%A7a-1a7511169/');
     },
     closeDrawer() {
       this.drawer = !this.drawer;

@@ -107,7 +107,7 @@
       </v-col>
     </v-row>
   </v-parallax>
-    <v-main>
+    <v-main id="main">
       
       <v-row
       justify="center"
@@ -277,8 +277,9 @@ export default {
 </script>
 
 <style>
-#app {
-  background-image: linear-gradient(to bottom right, #bdc3c7, #2c3e50)
+#main {
+  background-image: url("../assets/textureBack.jpg");
+  background-repeat: initial;
 }
 
 #up {

@@ -151,7 +151,7 @@
           <v-card
             elevation="7"
             outlined
-            shaped
+            tile
           >
             <v-card-title id="proj"><h3>Projects</h3></v-card-title>
             <h1>Projetos aqui</h1>
@@ -164,7 +164,7 @@
           <v-card
             elevation="7"
             outlined
-            shaped
+            tile
             
           >
             <v-card-title id="about"><h3>About</h3></v-card-title>
@@ -278,8 +278,7 @@ export default {
 
 <style>
 #main {
-  background-image: url("../assets/textureBack.jpg");
-  background-repeat: initial;
+  background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(77, 75, 75));
 }
 
 #up {

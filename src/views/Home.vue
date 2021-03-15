@@ -1,89 +1,5 @@
 <template>
   <v-app>
-    <v-app-bar
-        id="appbar"
-        dense
-      >
-        <v-app-bar-nav-icon @click="drawer = true"></v-app-bar-nav-icon>
-        <v-toolbar-title name="bar">Arthur Ayres Dev</v-toolbar-title>
-      </v-app-bar>
-      <v-navigation-drawer
-      v-model="drawer"
-      absolute
-      fixed
-      temporary
-      id="drawer"
-    >
-
-    <v-list>
-
-          <v-list-item >
-            <v-list-item-content>
-              <v-list-item-title class="title">
-                <v-list-item-avatar>
-                  <v-img src="../assets/me.jpg"></v-img>
-                </v-list-item-avatar>
-                Arthur Ayres
-              </v-list-item-title>
-              <v-list-item-subtitle>arthurmbayres@gmail.com</v-list-item-subtitle>
-            </v-list-item-content>
-          </v-list-item>
-        </v-list>
-
-        <br>
-        <v-divider></v-divider>
-        <v-divider></v-divider>
-        <v-divider></v-divider>
-        <br>
-
-      <v-list
-        nav
-        dense
-      >
-        <v-list-item-group
-          active-class="deep-purple--text text--accent-4"
-        >
-          <v-list-item @click="$vuetify.goTo(target2, options)">
-            <v-list-item-title>Projects</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item @click="$vuetify.goTo(target3, options)">
-            <v-list-item-title>About</v-list-item-title>
-          </v-list-item>
-
-          <v-list-item>
-            <v-list-item-title @click="link">Contact</v-list-item-title>
-          </v-list-item>
-        </v-list-item-group>
-      </v-list>
-
-      <br>
-      <v-divider></v-divider>
-      <v-divider></v-divider>
-      <v-divider></v-divider>
-      <br>
-
-      <v-row>
-        <v-col cols="12" md="4">
-        </v-col>
-        
-        <v-col cols="12" md="4">
-          <v-btn
-            elevation="8"
-            fab
-            outlined
-            @click="linkedin"
-          >
-            <v-icon x-large dark>
-              mdi-linkedin
-            </v-icon>
-          </v-btn>
-        </v-col>
-
-        <v-col cols="12" md="4">
-        </v-col>
-      </v-row>
-    </v-navigation-drawer>
     <v-parallax
         dark
         height="1000"
@@ -108,101 +24,161 @@
     </v-row>
   </v-parallax>
     <v-main id="main">
-      
-      <v-row
-      justify="center"
-  
-      style="min-height: 160px;"
-    >
-      <v-col class="shrink">
-        <v-expand-transition>
-          <v-card
-           id="up"
-            v-show="expand"
-            @click="$vuetify.goTo(target, options)"
-            color="indigo"
-            rounded
-            height="40"
-            width="40"
-          >
-            <v-icon x-large dark>
-              mdi-arrow-up-circle
-            </v-icon>
-          </v-card>
-        </v-expand-transition>
-      </v-col>
-    </v-row>
+      <v-card
+        elevation="7"
+        tile
+        height="600"
+      >
+            <v-tabs
+              v-model="tab"
+              background-color="black"
+              centered
+              dark
+              icons-and-text
+            >
+              <v-tabs-slider></v-tabs-slider>
 
-      <v-container fluid>
-      
-      <br>
-      <br>
-      <v-row>
-        <v-col
-          class="text-center"
-          cols="12"
-          md="3"
-        >
-        </v-col>
-        <v-col
-          cols="12"
-          md="6"
-        >
-          <v-card
-            elevation="7"
-            outlined
-            tile
-          >
-            <v-card-title id="proj"><h3>Projects</h3></v-card-title>
-            <h1>Projetos aqui</h1>
-            <h1>Projetos aqui</h1>
-            <h1>Projetos aqui</h1>
-            <h1>Projetos aqui</h1>
-            <h1>Projetos aqui</h1>
+              <v-tab href="#tab-1">
+                Projects
+                <v-icon>mdi-sitemap</v-icon>
+              </v-tab>
+
+              <v-tab href="#tab-2">
+                Tecnologies
+                <v-icon>mdi-code-not-equal-variant</v-icon>
+              </v-tab>
+
+              <v-tab href="#tab-3">
+                About
+                <v-icon>mdi-account-box</v-icon>
+              </v-tab>
+            </v-tabs>
+
+            <v-tabs-items v-model="tab">
+              <v-tab-item
+                v-for="i in 3"
+                :key="i"
+                :value="'tab-' + i"
+              >
+                <v-card flat v-if="i == 1">
+                  <v-card-title id="proj"><h1>Projects</h1></v-card-title>
+                  <v-card-text>
+                    <h2>Projetos aqui</h2>
+                    <h2>Projetos aqui</h2>
+                    <h2>Projetos aqui</h2>
+                    <h2>Projetos aqui</h2>
+                    <h2>Projetos aqui</h2>
+                  </v-card-text>
+                </v-card>
+
+                <v-card flat v-if="i == 2">
+                  <v-card-title id="tec"><h1>Tecnologies</h1></v-card-title>
+                  <v-card-text>
+                    <h2>Front-End</h2>
+                    <br>
+                    <h3><v-icon>mdi-vuejs</v-icon> - Vue.js</h3>
+                    <h3><v-icon>mdi-language-javascript</v-icon> - Java Script</h3>
+                    <h4><v-icon>mdi-language-html5</v-icon> - Html (Learning)</h4>
+                    <h4><v-icon>mdi-language-css3</v-icon> - CSS (Learning)</h4>
+                    <br>
+                    <h2>Back-End</h2>
+                    <br>
+                    <h3><v-icon>mdi-laravel</v-icon> - Laravel</h3>
+                    <h4><v-icon>mdi-language-php</v-icon> - PHP (Learning)</h4>
+                    <br>
+                    <h2>Game Develop</h2>
+                    <br>
+                    <h4><v-icon>mdi-unreal</v-icon> - Unreal (Learning)</h4>
+                    <h4><v-icon>mdi-unity</v-icon> - Unity (Learning)</h4>
+                    <br><br>
+                  </v-card-text>
+                </v-card>
+
+                <v-card flat v-if="i == 3">
+                  <v-card-title id="about"><h1>About</h1></v-card-title>
+                  <v-card-text>
+                    <v-layout justify-center>
+                      <v-img src="../assets/me.jpg" max-width="300" max-height="300" ></v-img>
+                    </v-layout>
+
+                    <v-btn
+                      fab
+                      @click="github"
+                    >
+                      <v-icon x-large dark>
+                        mdi-github
+                      </v-icon>
+                    </v-btn>
+
+                  <v-btn
+                      fab
+                      @click="linkedin"
+                    >
+                      <v-icon x-large dark>
+                        mdi-linkedin
+                      </v-icon>
+                    </v-btn>
+
+                  <v-btn
+                      fab
+                      @click="instagram"
+                    >
+                      <v-icon x-large dark>
+                        mdi-instagram
+                      </v-icon>
+                    </v-btn>
+                    <br>
+                    <br>
+                  </v-card-text>
+                </v-card>
+              </v-tab-item>
+            </v-tabs-items>
           </v-card>
-            <br><br>
-          <v-card
-            elevation="7"
-            outlined
-            tile
+      
+
+      <v-footer
+        dark
+        padless
+      >
+        <v-card
+          class="flex"
+          flat
+          tile
+        >
+          <v-card-title class="py-2 white--text text-center">
+            <h5>@ Arthur Ayres (2021 - {{ new Date().getFullYear() }})</h5>
+
+            <v-spacer></v-spacer>
+
+            <v-btn
+              icon
+              @click="github"
+            >
+              <v-icon x-large dark>
+                mdi-github
+              </v-icon>
+            </v-btn>
+
+            <v-btn
+                icon
+                @click="linkedin"
+            >
+              <v-icon x-large dark>
+                mdi-linkedin
+              </v-icon>
+            </v-btn>
             
-          >
-            <v-card-title id="about"><h3>About</h3></v-card-title>
-            <v-layout justify-center>
-              <v-img src="../assets/me.jpg" max-width="300" max-height="300" ></v-img>
-            </v-layout>
-
-            <br>
-            <br>
-            <h1>Tecnologies</h1>
-            <v-divider></v-divider>
-            <v-divider></v-divider>
-            <v-divider></v-divider>
-
-            <h2>Front-End</h2>
-            <h3>Vue.js</h3>
-            <h3>Java Script</h3>
-            <h4>Html (Learning)</h4>
-            <h4>CSS (Learning)</h4>
-            <br>
-            <h2>Back-End</h2>
-            <h3>Laravel</h3>
-            <h4>PHP (Learning)</h4>
-            <br>
-            <h2>Game Develop</h2>
-            <h4>Unreal (Learning)</h4>
-            <h4>Unity (Learning)</h4>
-            <br><br>
-          </v-card>
-          </v-col>
-        <v-col
-          class="text-center"
-          cols="12"
-          md="3"
-        >
-        </v-col>
-      </v-row>
-  </v-container>
+            <v-btn
+                icon
+                @click="instagram"
+            >
+              <v-icon x-large dark>
+                mdi-instagram
+              </v-icon>
+            </v-btn>
+          </v-card-title>
+        </v-card>
+      </v-footer>
     </v-main>
   </v-app>
 </template>
@@ -215,6 +191,7 @@ export default {
   name: 'Home',
   data(){
     return{
+      tab: null,
       drawer: false,
       expand: false,
       easing: 'easeInOutCubic',
@@ -243,6 +220,7 @@ export default {
         return posicoes.y
       },
     target () {
+      this.tab1();
         return 0
       },
       options () {
@@ -269,6 +247,12 @@ export default {
     linkedin(){
       window.open('https://www.linkedin.com/in/arthur-mendon%C3%A7a-1a7511169/');
     },
+    instagram(){
+      window.open('https://www.instagram.com/arthurmbayres/');
+    },
+    github(){
+      window.open('https://github.com/AFS12');
+    },
     closeDrawer() {
       this.drawer = !this.drawer;
     },
@@ -278,7 +262,7 @@ export default {
 
 <style>
 #main {
-  background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(77, 75, 75));
+  /* background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(77, 75, 75)); */
 }
 
 #up {

@@ -2,8 +2,8 @@
   <v-app>
     <v-parallax
         dark
-        height="1000"
-        src="../assets/background.jpg"
+        :height= parallaxImg
+        src="../assets/background2.jpg"
       >
   <br>
     <v-row
@@ -103,6 +103,7 @@
 
                     <v-btn
                       fab
+                      dark
                       @click="github"
                     >
                       <v-icon x-large dark>
@@ -112,6 +113,7 @@
 
                   <v-btn
                       fab
+                      dark
                       @click="linkedin"
                     >
                       <v-icon x-large dark>
@@ -121,6 +123,7 @@
 
                   <v-btn
                       fab
+                      dark
                       @click="instagram"
                     >
                       <v-icon x-large dark>
@@ -192,8 +195,7 @@ export default {
   data(){
     return{
       tab: null,
-      drawer: false,
-      expand: false,
+      parallaxImg: 1000,
       easing: 'easeInOutCubic',
       easings: Object.keys(easings),
     }
@@ -206,21 +208,18 @@ export default {
   },
   computed:{
     target3 () {
-        this.closeDrawer();
         var myElement = document.getElementById('about');
         var posicoes = myElement.getBoundingClientRect();
         // console.log(posicoes.y);
         return posicoes.y
       },
     target2 () {
-        this.closeDrawer();
         var myElement = document.getElementById('proj');
         var posicoes = myElement.getBoundingClientRect();
         // console.log(posicoes.y);
         return posicoes.y
       },
     target () {
-      this.tab1();
         return 0
       },
       options () {
@@ -253,9 +252,6 @@ export default {
     github(){
       window.open('https://github.com/AFS12');
     },
-    closeDrawer() {
-      this.drawer = !this.drawer;
-    },
   },
 }
 </script>
@@ -263,6 +259,11 @@ export default {
 <style>
 #main {
   /* background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(77, 75, 75)); */
+}
+
+#img{
+  -webkit-transition: all 7.7s ease;
+  transition: all 7.7s ease;
 }
 
 #up {

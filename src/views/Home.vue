@@ -155,6 +155,7 @@
 
             <v-btn
               icon
+              dark
               @click="github"
             >
               <v-icon x-large dark>
@@ -164,6 +165,7 @@
 
             <v-btn
                 icon
+                dark
                 @click="linkedin"
             >
               <v-icon x-large dark>
@@ -173,6 +175,7 @@
             
             <v-btn
                 icon
+                dark
                 @click="instagram"
             >
               <v-icon x-large dark>

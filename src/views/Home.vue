@@ -60,14 +60,79 @@
                 :key="i"
                 :value="'tab-' + i"
               >
-                <v-card flat v-if="i == 1">
+                <v-card flat  v-if="i == 1">
                   <v-card-title id="proj"><h1>Projects</h1></v-card-title>
                   <v-card-text>
-                    <h2>Projetos aqui</h2>
-                    <h2>Projetos aqui</h2>
-                    <h2>Projetos aqui</h2>
-                    <h2>Projetos aqui</h2>
-                    <h2>Projetos aqui</h2>
+                    <v-container class="pa-4 text-center">
+                      <v-row
+                        class="fill-height"
+                        align="center"
+                        justify="center"
+                      >
+                        <template v-for="(item, i) in items">
+                          <v-col
+                            :key="i"
+                            cols="12"
+                            md="3"
+                          >
+                            <v-hover v-slot="{ hover }">
+                              <v-card
+                                id="projects"
+                                :elevation="hover ? 12 : 2"
+                                :class="{ 'on-hover': hover }"
+                              >
+                                <v-img
+                                  :src="getImgUrl(item.img)"
+                                  height="225px"
+                                >
+                                  <v-card-title :class="item.color">
+                                    <v-row
+                                      class="fill-height flex-column"
+                                      justify="space-between"
+                                    >
+                                      <p class="mt-4 subheading text-left">
+                                        {{ item.title }}
+                                      </p>
+
+                                      <div>
+                                        <p class="ma-0 body-1 font-weight-bold font-italic text-left">
+                                          {{ item.text }}
+                                        </p>
+                                        <p class="caption font-weight-medium font-italic text-left" v-show="hover">
+                                          {{ item.subtext }}
+                                        </p>
+                                        <p class="caption font-weight-medium font-italic text-left" v-show="hover">
+                                          {{ item.tecnologies }}
+                                        </p>
+                                      </div>
+
+                                      <div class="align-self-center">
+                                        <v-btn
+                                          v-for="(icon, index) in icons"
+                                          v-show="hover"
+                                          :href="item.src"
+                                          :key="index"
+                                          :class="{ 'show-btns': hover }"
+                                          color="black"
+                                        >
+                                          {{ btnText }}
+                                          <v-icon
+                                            :class="{ 'show-btns': hover }"
+                                            color="white"
+                                          >
+                                            {{ icon }}
+                                          </v-icon>
+                                        </v-btn>
+                                      </div>
+                                    </v-row>
+                                  </v-card-title>
+                                </v-img>
+                              </v-card>
+                            </v-hover>
+                          </v-col>
+                        </template>
+                      </v-row>
+                    </v-container>
                   </v-card-text>
                 </v-card>
 
@@ -197,10 +262,24 @@ export default {
   name: 'Home',
   data(){
     return{
+      icons: ['mdi-arrow-right-thick'],
+      btnText: 'Acesse',
       tab: null,
       parallaxImg: 1000,
       easing: 'easeInOutCubic',
       easings: Object.keys(easings),
+      items: [
+        {
+          title: 'Portal Do Contribuinte',
+          text: `Web Site Para Algumas Prefeituras Do Nordeste`,
+          subtext: 'Desenvolvido enquanto estagiava na Agill Serviços e Produtos',
+          tecnologies: 'Baseado no AdminLTE 2 | HTML, CSS, JS, VUE, LARAVEL',
+          src: 'http://servicos-vicosa.prefeitura.info/',
+          img: 'portalContribuinte',
+          color: 'title black--text'
+        },
+      ],
+      transparent: 'rgba(255, 255, 255, 0)',
     }
   },
   created () {
@@ -234,6 +313,10 @@ export default {
       },
   },
   methods: {
+    getImgUrl(pet) {
+      var images = require.context('../assets/', false, /\.jpg$/)
+      return images('./' + pet + ".jpg")
+    },
     handleScroll () {
       // Any code to be executed when the window is scrolled
       console.log();
@@ -259,7 +342,24 @@ export default {
 }
 </script>
 
+<style scoped>
+
+</style>
+
+
 <style>
+#projects {
+  transition: opacity .4s ease-in-out;
+}
+
+#projects:not(.on-hover) {
+  opacity: 0.6;
+ }
+
+.show-btns {
+  color: rgba(255, 255, 255, 1) !important;
+}
+
 #main {
   /* background-image: linear-gradient(to bottom right, rgba(255,0,0,0), rgb(77, 75, 75)); */
 }

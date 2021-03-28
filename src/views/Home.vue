@@ -11,8 +11,13 @@
       justify="center"
     >
       <v-col
+        cols="auto"
+      >
+          <v-img src="../assets/logo.png" max-width="300" max-height="300"></v-img>
+      </v-col>
+      <v-col
         class="text-center"
-        cols="12"
+        cols="auto"
       >
         <h1 class="display-3 font-weight-thin mb-4">
           Web And Game Developer 
@@ -27,7 +32,8 @@
       <v-card
         elevation="7"
         tile
-        height="600"
+        min-height="500"
+        max-height="6000"
       >
             <v-tabs
               v-model="tab"
@@ -99,9 +105,6 @@
                                           {{ item.text }}
                                         </p>
                                         <p class="caption font-weight-medium font-italic text-left" v-show="hover">
-                                          {{ item.subtext }}
-                                        </p>
-                                        <p class="caption font-weight-medium font-italic text-left" v-show="hover">
                                           {{ item.tecnologies }}
                                         </p>
                                       </div>
@@ -165,6 +168,19 @@
                     <v-layout justify-center>
                       <v-img src="../assets/me.jpg" max-width="300" max-height="300" ></v-img>
                     </v-layout>
+                    <br>
+                    <h3>Hey everyone,<br>
+                        I'm Arthur Ayres, Web and games developer. <br> <br>
+
+                        I have always loved computing, games and programming and I decided to turn that love into my best skills. <br>
+
+                        Currently studying Systems Analysis and Development at Faculdade Centro Universitário Mario Pontes Jucá - UMJ. <br>
+
+                        My first development stage was at Hospital Unimed Maceió for 4 months where I developed skills with Vue.js and Laravel. <br>
+                        
+                        I am currently interning at Agill Produtos e Serviços.
+                        </h3>
+                    <br>
 
                     <v-btn
                       fab
@@ -175,7 +191,7 @@
                         mdi-github
                       </v-icon>
                     </v-btn>
-
+                   &emsp;
                   <v-btn
                       fab
                       dark
@@ -185,7 +201,7 @@
                         mdi-linkedin
                       </v-icon>
                     </v-btn>
-
+                   &emsp;
                   <v-btn
                       fab
                       dark
@@ -215,9 +231,9 @@
         >
           <v-card-title class="py-2 white--text text-center">
             <h5>@ Arthur Ayres (2021 - {{ new Date().getFullYear() }})</h5>
-
             <v-spacer></v-spacer>
-
+            
+            <v-spacer></v-spacer>
             <v-btn
               icon
               dark
@@ -271,9 +287,8 @@ export default {
       items: [
         {
           title: 'Portal Do Contribuinte',
-          text: `Web Site Para Algumas Prefeituras Do Nordeste`,
-          subtext: 'Desenvolvido enquanto estagiava na Agill Serviços e Produtos',
-          tecnologies: 'Baseado no AdminLTE 2 | HTML, CSS, JS, VUE, LARAVEL',
+          text: `Website for Some Northeastern City Halls`,
+          tecnologies: 'Based on AdminLTE 2 | HTML, CSS, JS, VUE, LARAVEL',
           src: 'http://servicos-vicosa.prefeitura.info/',
           img: 'portalContribuinte',
           color: 'title black--text'

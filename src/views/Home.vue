@@ -86,6 +86,8 @@
                                 id="projects"
                                 :elevation="hover ? 12 : 2"
                                 :class="{ 'on-hover': hover }"
+                                @mouseover="mouseOver"
+                                @mouseleave="leave"
                               >
                                 <v-img
                                   :src="getImgUrl(item.img)"
@@ -97,16 +99,18 @@
                                       justify="space-between"
                                     >
                                       <p class="mt-4 subheading text-left">
-                                        {{ item.title }}
+                                        <v-card :color= opacity > {{ item.title }} </v-card>
                                       </p>
 
                                       <div>
-                                        <p class="ma-0 body-1 font-weight-bold font-italic text-left">
-                                          {{ item.text }}
-                                        </p>
-                                        <p class="caption font-weight-medium font-italic text-left" v-show="hover">
-                                          {{ item.tecnologies }}
-                                        </p>
+                                        <v-card :color= opacity >
+                                          <p class="ma-0 body-1 font-weight-bold font-italic text-left">
+                                            {{ item.text }} 
+                                          </p>
+                                          <p class="caption font-weight-medium font-italic text-left" v-show="hover">
+                                             {{ item.tecnologies }}
+                                          </p>
+                                        </v-card>
                                       </div>
 
                                       <div class="align-self-center">
@@ -279,8 +283,9 @@ export default {
   data(){
     return{
       icons: ['mdi-arrow-right-thick'],
-      btnText: 'Acesse',
+      btnText: 'Access',
       tab: null,
+      opacity: "rgb(255, 255, 255, 0)",
       parallaxImg: 1000,
       easing: 'easeInOutCubic',
       easings: Object.keys(easings),
@@ -328,6 +333,12 @@ export default {
       },
   },
   methods: {
+    mouseOver: function(){
+        this.opacity = "rgb(255, 255, 255, 0.8)";   
+    },
+    leave: function(){
+        this.opacity = "rgb(255, 255, 255, 0)";   
+    },
     getImgUrl(pet) {
       var images = require.context('../assets/', false, /\.jpg$/)
       return images('./' + pet + ".jpg")

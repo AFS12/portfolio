@@ -353,13 +353,13 @@ export default {
       }
     },
     link(){
-      window.open('https://api.whatsapp.com/send?phone=5582996872879');
+      window.open('https://api.whatsapp.com/send?phone=5582996872879', "_blank");
     },
     linkedin(){
-      window.open('https://www.linkedin.com/in/arthur-mendon%C3%A7a-1a7511169/');
+      window.open('https://www.linkedin.com/in/arthurayresdev/', "_blank");
     },
     instagram(){
-      window.open('https://www.instagram.com/arthurmbayres/');
+      window.open('https://www.instagram.com/arthurmbayres/', "_blank");
     },
     github(){
       window.open('https://github.com/AFS12');

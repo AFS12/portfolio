@@ -67,7 +67,7 @@
                 :value="'tab-' + i"
               >
                 <v-card flat  v-if="i == 1">
-                  <v-card-title id="proj"><h1>Projects</h1></v-card-title>
+                  <v-card-title id="proj"><h1>Professional Projects</h1></v-card-title>
                   <v-card-text>
                     <v-container class="pa-4 text-center">
                       <v-row
@@ -76,6 +76,81 @@
                         justify="center"
                       >
                         <template v-for="(item, i) in items">
+                          <v-col
+                            :key="i"
+                            cols="12"
+                            md="3"
+                          >
+                            <v-hover v-slot="{ hover }">
+                              <v-card
+                                id="projects"
+                                :elevation="hover ? 12 : 2"
+                                :class="{ 'on-hover': hover }"
+                                @mouseover="mouseOver"
+                                @mouseleave="leave"
+                              >
+                                <v-img
+                                  :src="getImgUrl(item.img)"
+                                  height="225px"
+                                >
+                                  <v-card-title :class="item.color">
+                                    <v-row
+                                      class="fill-height flex-column"
+                                      justify="space-between"
+                                    >
+                                      <p class="mt-4 subheading text-left">
+                                        <v-card :color= opacity > {{ item.title }} </v-card>
+                                      </p>
+
+                                      <div>
+                                        <v-card :color= opacity >
+                                          <p class="ma-0 body-1 font-weight-bold font-italic text-left">
+                                            {{ item.text }} 
+                                          </p>
+                                          <p class="caption font-weight-medium font-italic text-left" v-show="hover">
+                                             {{ item.tecnologies }}
+                                          </p>
+                                        </v-card>
+                                      </div>
+
+                                      <div class="align-self-center">
+                                        <v-btn
+                                          v-for="(icon, index) in icons"
+                                          v-show="hover"
+                                          :href="item.src"
+                                          :key="index"
+                                          :class="{ 'show-btns': hover }"
+                                          color="black"
+                                        >
+                                          {{ btnText }}
+                                          <v-icon
+                                            :class="{ 'show-btns': hover }"
+                                            color="white"
+                                          >
+                                            {{ icon }}
+                                          </v-icon>
+                                        </v-btn>
+                                      </div>
+                                    </v-row>
+                                  </v-card-title>
+                                </v-img>
+                              </v-card>
+                            </v-hover>
+                          </v-col>
+                        </template>
+                      </v-row>
+                    </v-container>
+                  </v-card-text>
+                  <v-divider></v-divider>
+                  <v-card-title id="proj"><h1>Personal Projects</h1></v-card-title>
+                  <v-card-text>
+                    <v-container class="pa-4 text-center">
+                      <v-row
+                        class="fill-height"
+                        align="center"
+                        justify="center"
+                      >
+                        <template v-for="(item, i) in items2">
                           <v-col
                             :key="i"
                             cols="12"
@@ -185,7 +260,9 @@
                         I am currently interning at Agill Produtos e Serviços.
                         </h3>
                     <br>
-
+                    <br>
+                      <h2>My Contacts and social networks</h2>
+                    <br>
                     <v-btn
                       fab
                       dark
@@ -296,6 +373,16 @@ export default {
           tecnologies: 'Based on AdminLTE 2 | HTML, CSS, JS, VUE, LARAVEL',
           src: 'http://servicos-vicosa.prefeitura.info/',
           img: 'portalContribuinte',
+          color: 'title black--text'
+        },
+      ],
+      items2: [
+        {
+          title: 'Social Network Layout',
+          text: `Layout inspired on facebook`,
+          tecnologies: 'VUE, VUETIFY',
+          src: 'https://github.com/AFS12/social_network',
+          img: 'socialNetwork',
           color: 'title black--text'
         },
       ],

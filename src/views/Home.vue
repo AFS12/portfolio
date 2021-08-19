@@ -225,13 +225,13 @@
                     <br>
                     <h3><v-icon>mdi-vuejs</v-icon> - Vue.js</h3>
                     <h3><v-icon>mdi-language-javascript</v-icon> - Java Script</h3>
-                    <h4><v-icon>mdi-language-html5</v-icon> - Html (Learning)</h4>
-                    <h4><v-icon>mdi-language-css3</v-icon> - CSS (Learning)</h4>
+                    <h4><v-icon>mdi-language-html5</v-icon> - Html</h4>
+                    <h4><v-icon>mdi-language-css3</v-icon> - CSS</h4>
                     <br>
                     <h2>Back-End</h2>
                     <br>
                     <h3><v-icon>mdi-laravel</v-icon> - Laravel</h3>
-                    <h4><v-icon>mdi-language-php</v-icon> - PHP (Learning)</h4>
+                    <h4><v-icon>mdi-language-php</v-icon> - PHP</h4>
                     <br>
                     <h2>Game Develop</h2>
                     <br>
@@ -255,9 +255,11 @@
 
                         Currently studying Systems Analysis and Development at Faculdade Centro Universitário Mario Pontes Jucá - UMJ. <br>
 
-                        My first development stage was at Hospital Unimed Maceió for 4 months where I developed skills with Vue.js and Laravel. <br>
+                        My first development internship was at Hospital Unimed Maceió for 4 months where I developed skills with Vue.js and Laravel. <br>
                         
-                        I am currently interning at Agill Produtos e Serviços.
+                        My second internship at Agill Products and Services for 8 months where I worked with Vue.js, Laravel, mysql, AdminLTE 2 (template). <br>
+
+                        I'm currently working at Gespag as a front-end developer using Vue.js and Vuetify.
                         </h3>
                     <br>
                     <br>
@@ -373,6 +375,14 @@ export default {
           tecnologies: 'Based on AdminLTE 2 | HTML, CSS, JS, VUE, LARAVEL',
           src: 'http://servicos-vicosa.prefeitura.info/',
           img: 'portalContribuinte',
+          color: 'title black--text'
+        },
+        {
+          title: 'Gespag',
+          text: `Developing new front-end layout`,
+          tecnologies: 'VUE, VUETIFY',
+          src: 'http://new.gespag.com.br/login',
+          img: 'gespag-brasil',
           color: 'title black--text'
         },
       ],

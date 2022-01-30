@@ -73,7 +73,7 @@ export default new MLCreate({
             technologiesDescriptionTitle: "Tecnologias e<br> Experiências",
             technologiesDescriptionStart: "D",
             technologiesDescription: 'esde o inicio como desenvolvedor web, a aproximadamente {years} anos, onde desde então aprimorei minhas habilidades com JavaScript/Vue.js e PHP/Laravel. Desenvolvi Para empresas como Unimed e Gespag utilizando Vue.js e Vuetify adquirindo conhecimento de todo o ecosistema do framework como o VueRouter e Vuex.',
-            aboutDescriptionTitle: "Sobre Min",
+            aboutDescriptionTitle: "Sobre Mim",
             aboutDescriptionStart: "O",
             aboutDescription: "lá a todos, sou Arthur Ayres, desenvolvedor Web. Sempre amei computação, jogos e programação e decidi transformar esse amor em minhas melhores habilidades. Atualmente cursando Análise e Desenvolvimento de Sistemas na Faculdade Centro Universitário Mario Pontes Jucá - UMJ. Meu primeiro estágio de desenvolvimento foi no Hospital Unimed Maceió por 4 meses onde desenvolvi habilidades com Vue.js e Laravel. Meu segundo estágio na Agill Products and Services por 8 meses onde trabalhei com Vue.js, Laravel, mysql, AdminLTE 2 (template). Atualmente trabalho na Gespag como desenvolvedor front-end usando Vue.js e Vuetify.",
             contactDescriptionTitle: "Contate-me",

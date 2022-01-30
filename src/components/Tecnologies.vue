@@ -5,9 +5,9 @@
         <v-col>
           <!-- <h1 v-html=""></h1> -->
           <v-btn text x-large dark class="btnText" color="#f3e9b3">
-            <h1 v-html="$ml.with('VueJS').get(`technologiesDescriptionTitle`)">
-            </h1>
-            
+            <h1
+              v-html="$ml.with('VueJS').get(`technologiesDescriptionTitle`)"
+            ></h1>
           </v-btn>
         </v-col>
         <v-col class="techMainText">
@@ -81,10 +81,10 @@
         </v-col>
         <v-col>
           <v-row>
-            <v-col lg="6" md="12">
+            <v-col lg="6" md="12" sm="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
-                  Full Stack developer
+                  Full-Stack developer
                 </v-card-title>
                 <v-card-subtitle>
                   Unimed<br />
@@ -92,10 +92,10 @@
                 </v-card-subtitle>
               </v-card>
             </v-col>
-            <v-col lg="6" md="12">
+            <v-col lg="6" md="12" sm="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
-                  Full Stack developer
+                  Full-Stack developer
                 </v-card-title>
                 <v-card-subtitle>
                   Agill Serviços<br />
@@ -103,7 +103,9 @@
                 </v-card-subtitle>
               </v-card>
             </v-col>
-            <v-col lg="6" md="12">
+          </v-row>
+          <v-row>
+            <v-col lg="6" md="12" sm="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
                   Frontend developer
@@ -114,7 +116,7 @@
                 </v-card-subtitle>
               </v-card>
             </v-col>
-            <v-col lg="6" md="12">
+            <v-col lg="6" md="12" sm="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
                   Frontend developer

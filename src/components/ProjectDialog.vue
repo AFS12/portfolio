@@ -2,6 +2,9 @@
   <div>
     <v-toolbar color="#E6D267" light>
       <h2>{{ title }}</h2>
+      <v-spacer></v-spacer>
+      <v-chip color="#131212" v-show="workType" dark v-text="$ml.with('VueJS').get(`workProfessional`)"></v-chip>
+      <v-chip color="#E6E6E6" v-show="!workType" light v-text="$ml.with('VueJS').get(`workPersonal`)"></v-chip>
     </v-toolbar>
     <v-card-text>
       <v-carousel cycle height="400">
@@ -18,14 +21,12 @@
         <v-col>
           <h1 v-text="$ml.with('VueJS').get(`descriptionTitle`)"></h1>
           <br />
-          <p v-text="$ml.with('VueJS').get(`${work}.description`)">
-          </p>
+          <p v-text="$ml.with('VueJS').get(`${work}.description`)"></p>
         </v-col>
         <v-col>
           <h1 v-text="$ml.with('VueJS').get(`technologiesTitle`)"></h1>
           <br />
-          <p v-text="$ml.with('VueJS').get(`${work}.technologiesUsed`)">
-          </p>
+          <p v-text="$ml.with('VueJS').get(`${work}.technologiesUsed`)"></p>
         </v-col>
       </v-row>
     </v-card-text>
@@ -40,6 +41,7 @@ export default {
     title: String,
     work: String,
     images: Array,
+    workType: Boolean
   },
 };
 </script>

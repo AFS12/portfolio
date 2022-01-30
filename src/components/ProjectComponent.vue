@@ -39,7 +39,7 @@
         v-model="dialog"
       >
         <v-card color="#2B2A2A" dark>
-          <ProjectDialog :title="title" :work="work" :images="images" />
+          <ProjectDialog :title="title" :work="work" :images="images" :workType="workType" />
           <v-card-actions class="justify-end">
             <v-btn text v-text="$ml.get(`accessBtn`)"> </v-btn>
             <v-spacer></v-spacer>
@@ -76,6 +76,7 @@ export default {
     title: String,
     color: String,
     work: String,
+    workType: Boolean,
     images: Array,
   },
 

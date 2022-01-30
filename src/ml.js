@@ -10,6 +10,8 @@ export default new MLCreate({
     languages: [
         new MLanguage('EN').create({
             menuProjects: "Projects",
+            workPersonal:"Personal Project",
+            workProfessional: "Professional Project",
             menuTec: "Technologies",
             menuAbout: "About",
             menuContact: "Contact",
@@ -19,7 +21,7 @@ export default new MLCreate({
             sendBtn:"Send",
             accessBtn: "Access",
             closeBtn: "Close",
-            technologiesDescriptionTitle: "Technologies and <br> Experiences",
+            technologiesDescriptionTitle: "Technologies<br>and<br>Experiences",
             technologiesDescriptionStart: "S",
             technologiesDescription: 'ince the beginning as a web developer, approximately {years} years ago, where since then I have improved my skills with JavaScript/Vue.js and PHP/Laravel. I developed for companies like Unimed and Gespag using Vue.js and Vuetify, acquiring knowledge of the entire ecosystem of the framework such as VueRouter and Vuex.',
             aboutDescriptionTitle: "About Me",
@@ -29,6 +31,12 @@ export default new MLCreate({
             contactText: "Contact me through social networks, or if you prefer send a message through the form below",
             descriptionTitle: "Description",
             technologiesTitle: "Technologies used",
+            social_network: {
+                summary: `Social network layout based on Facebook`,
+                description: `Project developed for study and self improvement based on Facebook layout.`,
+                technologiesUsed: "I used the Vue.js Framework along with the Vuetify css library set.",
+                technologies: "VUE, VUETIFY",
+            },
             portalContribuinte: {
                 summary: `Website for some northeastern city halls`,
                 description: `Site developed to meet demands, such as "iptu", requirements, issuance of certificates, among others from city halls in the northeast of Brazil.`,
@@ -51,6 +59,8 @@ export default new MLCreate({
 
         new MLanguage('PT-BR').create({
             menuProjects: "Projetos",
+            workPersonal:"Projeto Pessoal",
+            workProfessional: "Projeto Profissional",
             menuTec: "Tecnologias",
             menuAbout: "Sobre",
             menuContact: "Contato",
@@ -70,6 +80,12 @@ export default new MLCreate({
             contactText: "Entre em contato comigo pelas redes sociais, ou se preferir envie uma mensagem através do formulário abaixo.",
             descriptionTitle: "Descrição",
             technologiesTitle: "Tecnologias usadas",
+            social_network: {
+                summary: `Layout de rede social basado no Facebook`,
+                description: `Projeto desenvolvido para estudo e aprimoramento proprio baseado no layout do Facebook.`,
+                technologiesUsed: "Utilizei o Framework Vue.js junto com o conjunto de biblotecas css Vuetify.",
+                technologies: "VUE, Vuetify",
+            },
             portalContribuinte: {
                 summary: `Website para algumas prefeituras do nordeste`,
                 description: `Website desenvolvido para atender demandas, como "iptu", requerimentos, emissão de certidões, entre outros de prefeituras do nordeste Brasileiro.`,

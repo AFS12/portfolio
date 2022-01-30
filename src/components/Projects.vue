@@ -8,6 +8,7 @@
             :title="item.title"
             :work="item.project"
             :images="item.images"
+            :workType="item.workType"
           />
         </v-col>
       </template>
@@ -27,6 +28,7 @@ export default {
     items: [
       {
         project: "portalContribuinte",
+        workType: true,
         title: "Portal Do Contribuinte",
         src: "http://servicos-vicosa.prefeitura.info/",
         img: "portalContribuinte",
@@ -48,6 +50,7 @@ export default {
       },
       {
         project: "gespag",
+        workType: true,
         title: "Gespag",
         src: "http://new.gespag.com.br/login",
         img: "gespag-brasil",
@@ -63,6 +66,28 @@ export default {
           },
           {
             src: require("../assets/gespagImages/singin.png"),
+          },
+        ],
+        color: "title black--text",
+      },
+      {
+        project: "social_network",
+        workType: false,
+        title: "Social Network",
+        src: "https://github.com/AFS12/social_network",
+        img: "socialNetwork",
+        images: [
+          {
+            src: require("../assets/socialNetwork/image1.png"),
+          },
+          {
+            src: require("../assets/socialNetwork/image2.png"),
+          },
+          {
+            src: require("../assets/socialNetwork/image3.png"),
+          },
+          {
+            src: require("../assets/socialNetwork/image4.png"),
           },
         ],
         color: "title black--text",

@@ -41,7 +41,7 @@
         <v-card color="#2B2A2A" dark>
           <ProjectDialog :title="title" :work="work" :images="images" :workType="workType" />
           <v-card-actions class="justify-end">
-            <v-btn text v-text="$ml.get(`accessBtn`)"> </v-btn>
+            <v-btn text v-text="$ml.get(`accessBtn`)" @click="workLink(src)"> </v-btn>
             <v-spacer></v-spacer>
             <v-btn
               text
@@ -74,7 +74,6 @@ export default {
     src: String,
     img: String,
     title: String,
-    color: String,
     work: String,
     workType: Boolean,
     images: Array,
@@ -85,7 +84,9 @@ export default {
       var images = require.context("../assets/", false, /\.jpg$/);
       return images("./" + path + ".jpg");
     },
-    test() {},
+    workLink(link) {
+      window.open(link, "_blank");
+    },
     mouseOver: function () {
       this.opacity = "rgb(255, 255, 255, 0.8)";
     },

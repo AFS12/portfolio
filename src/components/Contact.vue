@@ -16,7 +16,7 @@
           <v-icon x-large dark> mdi-github </v-icon>
         </v-btn>
 
-        <v-btn icon dark @click="linkedin">
+        <v-btn icon dark @click="linkedin" class="centerSocialNet">
           <v-icon x-large dark> mdi-linkedin </v-icon>
         </v-btn>
 
@@ -67,7 +67,7 @@
           </v-row>
           <v-row>
             <v-spacer></v-spacer>
-            <v-btn type="submit" color="#f3e9b3" width="200px" v-text="$ml.with('VueJS').get(`sendBtn`)">Send</v-btn>
+            <v-btn type="submit" color="#f3e9b3" width="200px" v-text="$ml.with('VueJS').get(`sendBtn`)"></v-btn>
             <v-spacer></v-spacer>
           </v-row>
         </form>
@@ -183,7 +183,7 @@ export default {
       window.open("https://www.instagram.com/arthurmbayres/", "_blank");
     },
     github() {
-      window.open("https://github.com/AFS12");
+      window.open("https://github.com/AFS12", "_blank");
     },
   },
 };
@@ -196,5 +196,10 @@ export default {
 
 .formMargin {
   margin-top: 50px;
+}
+
+.centerSocialNet{
+  margin-right: 10px;
+  margin-left: 10px;
 }
 </style>

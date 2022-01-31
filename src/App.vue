@@ -60,6 +60,22 @@
           <div :style="menuBarStyle"></div>
         </v-list-item-group>
       </v-list>
+      
+      <template v-slot:append>
+        <div class="pa-2">
+        <v-btn icon dark @click="github">
+          <v-icon x-large dark> mdi-github </v-icon>
+        </v-btn>
+
+        <v-btn icon dark @click="linkedin" class="centerSocialNet">
+          <v-icon x-large dark> mdi-linkedin </v-icon>
+        </v-btn>
+
+        <v-btn icon dark @click="instagram">
+          <v-icon x-large dark> mdi-instagram </v-icon>
+        </v-btn>
+        </div>
+      </template>
     </v-navigation-drawer>
     <v-main class="mainContent">
       <br />
@@ -181,6 +197,15 @@ export default {
     sleep(ms) {
       return new Promise((resolve) => setTimeout(resolve, ms));
     },
+    linkedin() {
+      window.open("https://www.linkedin.com/in/arthurayresdev/", "_blank");
+    },
+    instagram() {
+      window.open("https://www.instagram.com/arthurmbayres/", "_blank");
+    },
+    github() {
+      window.open("https://github.com/AFS12", "_blank");
+    },
   },
 };
 </script>
@@ -225,5 +250,14 @@ export default {
 
 .menuButton {
   margin-left: 20px;
+}
+
+.pa-2{
+  text-align: center;
+}
+
+.centerSocialNet{
+  margin-right: 10px;
+  margin-left: 10px;
 }
 </style>

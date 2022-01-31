@@ -9,6 +9,7 @@
             :work="item.project"
             :images="item.images"
             :workType="item.workType"
+            :src="item.src"
           />
         </v-col>
       </template>
@@ -46,7 +47,6 @@ export default {
             src: require("../assets/portalContribuinteImages/menuReq.png"),
           },
         ],
-        color: "title black--text",
       },
       {
         project: "gespag",
@@ -68,7 +68,6 @@ export default {
             src: require("../assets/gespagImages/singin.png"),
           },
         ],
-        color: "title black--text",
       },
       {
         project: "social_network",
@@ -90,7 +89,6 @@ export default {
             src: require("../assets/socialNetwork/image4.png"),
           },
         ],
-        color: "title black--text",
       },
       // {
       //   project: "emediar",
@@ -108,7 +106,6 @@ export default {
       //       src: "https://github.com/kallyous.png",
       //     },
       //   ],
-      //   color: "title black--text",
       // },
     ],
   }),

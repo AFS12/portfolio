@@ -90,23 +90,30 @@ export default {
           },
         ],
       },
-      // {
-      //   project: "emediar",
-      //   title: "E-mediar",
-      //   src: "http://new.gespag.com.br/login",
-      //   img: "gespag-brasil",
-      //   images: [
-      //     {
-      //       src: "https://github.com/AFS12.png",
-      //     },
-      //     {
-      //       src: "https://github.com/antonioizaias.png",
-      //     },
-      //     {
-      //       src: "https://github.com/kallyous.png",
-      //     },
-      //   ],
-      // },
+      {
+        project: "alagoasMaior",
+        workType: true,
+        title: "Alagoas Maior",
+        src: "https://alagoasmaior.com.br/home",
+        img: "alagoasMaior",
+        images: [
+          {
+            src: require("../assets/alagoasMaiorImages/home1.png"),
+          },
+          {
+            src: require("../assets/alagoasMaiorImages/home2.png"),
+          },
+          {
+            src: require("../assets/alagoasMaiorImages/products.png"),
+          },
+          {
+            src: require("../assets/alagoasMaiorImages/productInfo.png"),
+          },
+          {
+            src: require("../assets/alagoasMaiorImages/producerInfo.png"),
+          },
+        ],
+      },
     ],
   }),
 };

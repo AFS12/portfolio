@@ -80,16 +80,16 @@
     <v-main class="mainContent">
       <br />
       <v-row class="d-flex flex-row-reverse switchLang">
-        <label class="switchLabel">English</label
+        <label class="switchLabel" @click="changeEnglish">English</label
         ><v-switch
           v-model="switchLang"
           @click="[switchLang ? $ml.change('EN') : $ml.change('PT-BR')]"
           dark
           inset
         ></v-switch
-        ><label class="switchLabel">Português</label>
+        ><label class="switchLabel" @click="changePortuguese">Português</label>
         <v-spacer></v-spacer>
-        <v-btn fab color="#2b2a2a" class="menuButton">
+        <v-btn fab color="#2b2a2a" class="menuButton" elevation="0">
           <v-icon color="#ffd700" @click="drawer = !drawer">mdi-menu</v-icon>
         </v-btn>
       </v-row>
@@ -158,6 +158,14 @@ export default {
     },
   }),
   methods: {
+    changeEnglish(){
+      this.switchLang = true
+      this.$ml.change('EN')
+    },
+    changePortuguese(){
+      this.switchLang = false
+      this.$ml.change('PT-BR')
+    },
     async menuIndex(index) {
       const moveValue = 44;
       const baseValue = -174;
@@ -246,6 +254,7 @@ export default {
 .switchLabel {
   margin-top: 20px;
   margin-right: 15px;
+  cursor: pointer;
 }
 
 .menuButton {

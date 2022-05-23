@@ -49,11 +49,11 @@ export default new MLCreate({
                 technologiesUsed: "Acting as Front-end, I used Vue.js and Vuetify to remodel the original layout and develop new features.",
                 technologies: "VUE, VUETIFY",
             },
-            emediar: {
-                summary: `Developing Full system`,
-                description: `Developing Full system`,
-                technologiesUsed: "",
-                technologies: "PHP, CodeIgniter",
+            alagoasMaior: {
+                summary: `Landing Page Development`,
+                description: `Landing page aimed at promoting local producers in the state of Alagoas in Brazil, the landing page contains a list of separate products and producers and filters on both sides for a better search as well as details of products and producers and contact for customers.`,
+                technologiesUsed: "It was used in the Vue.js project as a base and Vuetify as a css framework, consuming an API provided for the development and completion of the landing page",
+                technologies: "VUE, VUETIFY",
             },
         }),
 
@@ -98,11 +98,11 @@ export default new MLCreate({
                 technologiesUsed: "Atuando como Front-end, utilizei Vue.js e Vuetify para remodelar o layout original e desenvolver novas features.",
                 technologies: "VUE, VUETIFY",
             },
-            emediar: {
-                summary: `Desenvolvimento de um sistema completo`,
-                description: `Developing Full system`,
-                technologiesUsed: "",
-                technologies: "PHP, CodeIgniter",
+            alagoasMaior: {
+                summary: `Desenvolvimento de uma Landing Page`,
+                description: `Landing page voltada para a divulgação de produtores locais do estado de Alagoas no Brasil, a landing page contem lista de produtos e produtores separados e filtros em ambas as partes para melhor busca assim como detalhamento dos produtos e dos produtores e contato para clientes.`,
+                technologiesUsed: "Foi utilizado no projeto Vue.js como base e Vuetify como framework css, consulmindo uma API fornecida para o desenvolvimento e preenchimento da landing page",
+                technologies: "VUE, VUETIFY",
             },
         })
     ]

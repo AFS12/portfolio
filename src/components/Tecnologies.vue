@@ -11,6 +11,7 @@
           </v-btn>
         </v-col>
         <v-col class="techMainText">
+          <br>
           <h2
             class="start"
             v-html="$ml.with('VueJS').get(`technologiesDescriptionStart`)"

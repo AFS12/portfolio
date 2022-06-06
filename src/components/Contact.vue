@@ -67,7 +67,10 @@
           </v-row>
           <v-row>
             <v-spacer></v-spacer>
-            <v-btn type="submit" color="#f3e9b3" width="200px" v-text="$ml.with('VueJS').get(`sendBtn`)"></v-btn>
+            <button type="submit" class="glowing-button-hover">
+              <span v-text="$ml.with('VueJS').get(`sendBtn`)"></span>
+              <i></i>
+            </button>
             <v-spacer></v-spacer>
           </v-row>
         </form>
@@ -198,8 +201,87 @@ export default {
   margin-top: 50px;
 }
 
-.centerSocialNet{
+.centerSocialNet {
   margin-right: 10px;
   margin-left: 10px;
+}
+</style>
+
+<style lang="scss">
+/* Glowing Button Hover */
+$colorTheme: #f3e9b3;
+.glowing-button-hover {
+  position: relative;
+  background: #444;
+  color: #fff !important;
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  letter-spacing: 0.1em;
+  padding: 10px 30px;
+  transition: 0.5s;
+}
+
+.glowing-button-hover:hover {
+  letter-spacing: 0.25em;
+  background: $colorTheme;
+  color: $colorTheme !important;
+  box-shadow: 0 0 35px $colorTheme;
+}
+.glowing-button-hover::before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: #27282c;
+}
+.glowing-button-hover span {
+  position: relative;
+  z-index: 1;
+}
+.glowing-button-hover i {
+  position: absolute;
+  inset: 0;
+  display: block;
+}
+.glowing-button-hover i::before {
+  content: "";
+  position: absolute;
+  border: 2px solid $colorTheme;
+  top: -3.5px;
+  left: 80%;
+  width: 10px;
+  height: 8px;
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: top 0.5s, width 0.5s, left 0.7s 0.37s;
+}
+.glowing-button-hover:hover i::before {
+  background: $colorTheme;
+  width: 20px;
+  left: 3.8%;
+  top: 90%;
+
+  transition: left 0.5s, width 0.5s, top 0.7s 0.37s;
+}
+
+.glowing-button-hover i::after {
+  content: "";
+  position: absolute;
+  border: 2px solid $colorTheme;
+  bottom: -3.5px;
+  left: 20%;
+  width: 10px;
+  height: 8px;
+  background: #27282c;
+  transform: translateX(-50%);
+  transition: bottom 0.5s, width 0.5s, left 0.7s 0.37s;
+}
+.glowing-button-hover:hover i::after {
+  background: $colorTheme;
+  width: 20px;
+  left: 96.2%;
+  bottom: 90%;
+
+  transition: left 0.5s, width 0.5s, bottom 0.7s 0.37s;
 }
 </style>

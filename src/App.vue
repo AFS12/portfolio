@@ -11,6 +11,21 @@
           ></v-img>
           <v-list-item-title class="text-h6"> Arthur Ayres </v-list-item-title>
           <v-list-item-subtitle> Developer </v-list-item-subtitle>
+          <v-list-item-subtitle>
+            <div class="pa-2" v-if="isMobile()">
+              <v-btn icon @click="github">
+                <v-icon x-large dark> mdi-github </v-icon>
+              </v-btn>
+
+              <v-btn icon @click="linkedin" class="centerSocialNet">
+                <v-icon x-large dark> mdi-linkedin </v-icon>
+              </v-btn>
+
+              <v-btn icon @click="instagram">
+                <v-icon x-large dark> mdi-instagram </v-icon>
+              </v-btn>
+            </div>
+          </v-list-item-subtitle>
         </v-list-item-content>
       </v-list-item>
 
@@ -27,7 +42,9 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title v-text="$ml.with('VueJS').get(`menuProjects`)"></v-list-item-title>
+              <v-list-item-title
+                v-text="$ml.with('VueJS').get(`menuProjects`)"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link @click="menuIndex(1)">
@@ -36,7 +53,9 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title v-text="$ml.with('VueJS').get(`menuTec`)"></v-list-item-title>
+              <v-list-item-title
+                v-text="$ml.with('VueJS').get(`menuTec`)"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link @click="menuIndex(2)">
@@ -45,7 +64,9 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title v-text="$ml.with('VueJS').get(`menuAbout`)"></v-list-item-title>
+              <v-list-item-title
+                v-text="$ml.with('VueJS').get(`menuAbout`)"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <v-list-item link @click="menuIndex(3)">
@@ -54,26 +75,28 @@
             </v-list-item-icon>
 
             <v-list-item-content>
-              <v-list-item-title v-text="$ml.with('VueJS').get(`menuContact`)"></v-list-item-title>
+              <v-list-item-title
+                v-text="$ml.with('VueJS').get(`menuContact`)"
+              ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
           <div :style="menuBarStyle"></div>
         </v-list-item-group>
       </v-list>
-      
-      <template v-slot:append>
+
+      <template v-slot:append v-if="!isMobile()">
         <div class="pa-2">
-        <v-btn icon dark @click="github">
-          <v-icon x-large dark> mdi-github </v-icon>
-        </v-btn>
+          <v-btn icon dark @click="github">
+            <v-icon x-large dark> mdi-github </v-icon>
+          </v-btn>
 
-        <v-btn icon dark @click="linkedin" class="centerSocialNet">
-          <v-icon x-large dark> mdi-linkedin </v-icon>
-        </v-btn>
+          <v-btn icon dark @click="linkedin" class="centerSocialNet">
+            <v-icon x-large dark> mdi-linkedin </v-icon>
+          </v-btn>
 
-        <v-btn icon dark @click="instagram">
-          <v-icon x-large dark> mdi-instagram </v-icon>
-        </v-btn>
+          <v-btn icon dark @click="instagram">
+            <v-icon x-large dark> mdi-instagram </v-icon>
+          </v-btn>
         </div>
       </template>
     </v-navigation-drawer>
@@ -110,7 +133,7 @@
       </v-expand-transition>
       <v-expand-transition>
         <v-container v-show="contactMenu">
-          <Contact :language="switchLang"/>
+          <Contact :language="switchLang" />
         </v-container>
       </v-expand-transition>
     </v-main>
@@ -158,13 +181,13 @@ export default {
     },
   }),
   methods: {
-    changeEnglish(){
-      this.switchLang = true
-      this.$ml.change('EN')
+    changeEnglish() {
+      this.switchLang = true;
+      this.$ml.change("EN");
     },
-    changePortuguese(){
-      this.switchLang = false
-      this.$ml.change('PT-BR')
+    changePortuguese() {
+      this.switchLang = false;
+      this.$ml.change("PT-BR");
     },
     async menuIndex(index) {
       const moveValue = 44;
@@ -214,6 +237,14 @@ export default {
     github() {
       window.open("https://github.com/AFS12", "_blank");
     },
+    isMobile() {
+      if ("maxTouchPoints" in navigator)
+        return navigator.maxTouchPoints > 0 ? true : false;
+      else
+        return /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(
+          navigator.userAgent
+        );
+    },
   },
 };
 </script>
@@ -261,11 +292,11 @@ export default {
   margin-left: 20px;
 }
 
-.pa-2{
+.pa-2 {
   text-align: center;
 }
 
-.centerSocialNet{
+.centerSocialNet {
   margin-right: 10px;
   margin-left: 10px;
 }

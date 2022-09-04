@@ -10,7 +10,7 @@
     <br /><br />
     <v-row>
       <v-spacer></v-spacer>
-      <v-col lg="6" md="12">
+      <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
         <p v-html="$ml.with('VueJS').get(`contactText`)"></p>
         <v-btn icon dark @click="github">
           <v-icon x-large dark> mdi-github </v-icon>
@@ -28,7 +28,7 @@
     </v-row>
     <v-row>
       <v-spacer></v-spacer>
-      <v-col lg="6" md="12" class="formMargin">
+      <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12" class="formMargin">
         <form ref="form" @submit.prevent="sendEmail">
           <v-row>
             <v-text-field
@@ -91,7 +91,7 @@
         </v-col>
         <v-spacer></v-spacer>
         <v-col cols="4">
-          <v-btn flat color="#ffd700" @click.native="snackbarPt = false" light>
+          <v-btn text color="#ffd700" @click.native="snackbarPt = false" light>
             Close
           </v-btn>
         </v-col>
@@ -110,7 +110,7 @@
           ></h3>
         </v-col>
         <v-col cols="4">
-          <v-btn flat color="#ffd700" @click.native="snackbarPt = false" light>
+          <v-btn text color="#ffd700" @click.native="snackbarPt = false" light>
             Fechar
           </v-btn>
         </v-col>

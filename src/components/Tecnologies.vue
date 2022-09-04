@@ -11,7 +11,7 @@
           </v-btn>
         </v-col>
         <v-col class="techMainText">
-          <br>
+          <br />
           <h2
             class="start"
             v-html="$ml.with('VueJS').get(`technologiesDescriptionStart`)"
@@ -82,7 +82,7 @@
         </v-col>
         <v-col>
           <v-row>
-            <v-col lg="6" md="12" sm="12">
+            <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
                   Full-Stack developer
@@ -93,7 +93,7 @@
                 </v-card-subtitle>
               </v-card>
             </v-col>
-            <v-col lg="6" md="12" sm="12">
+            <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
                   Full-Stack developer
@@ -106,7 +106,7 @@
             </v-col>
           </v-row>
           <v-row>
-            <v-col lg="6" md="12" sm="12">
+            <v-col cols="12" xl="6" lg="6" md="12" sm="12" xs="12">
               <v-card color="#1F1E1E" dark class="work">
                 <v-card-title primary-title class="workTitle">
                   Frontend developer

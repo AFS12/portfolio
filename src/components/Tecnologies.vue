@@ -36,7 +36,7 @@
           <v-progress-linear
             color="#FFEE58"
             buffer-value="0"
-            value="85"
+            value="92"
             stream
           ></v-progress-linear>
           <br />
@@ -52,7 +52,7 @@
           <v-progress-linear
             color="#01579B"
             buffer-value="0"
-            value="60"
+            value="85"
             stream
           ></v-progress-linear>
           <br />
@@ -60,7 +60,7 @@
           <v-progress-linear
             color="#EF6C00"
             buffer-value="0"
-            value="65"
+            value="75"
             stream
           ></v-progress-linear>
           <br />
@@ -68,7 +68,7 @@
           <v-progress-linear
             color="#5C6BC0"
             buffer-value="0"
-            value="55"
+            value="45"
             stream
           ></v-progress-linear>
           <br />
@@ -76,7 +76,15 @@
           <v-progress-linear
             color="#D50000"
             buffer-value="0"
-            value="72"
+            value="52"
+            stream
+          ></v-progress-linear>
+          <br />
+          <h3>Node.js <v-icon dark color="#89bb3c">mdi-nodejs</v-icon></h3>
+          <v-progress-linear
+            color="#89bb3c"
+            buffer-value="0"
+            value="22"
             stream
           ></v-progress-linear>
         </v-col>

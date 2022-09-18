@@ -49,23 +49,23 @@
           </v-list-item>
           <v-list-item link @click="menuIndex(1)">
             <v-list-item-icon>
-              <v-icon>mdi-code-not-equal-variant</v-icon>
-            </v-list-item-icon>
-
-            <v-list-item-content>
-              <v-list-item-title
-                v-text="$ml.with('VueJS').get(`menuTec`)"
-              ></v-list-item-title>
-            </v-list-item-content>
-          </v-list-item>
-          <v-list-item link @click="menuIndex(2)">
-            <v-list-item-icon>
               <v-icon>mdi-help-box</v-icon>
             </v-list-item-icon>
 
             <v-list-item-content>
               <v-list-item-title
                 v-text="$ml.with('VueJS').get(`menuAbout`)"
+              ></v-list-item-title>
+            </v-list-item-content>
+          </v-list-item>
+          <v-list-item link @click="menuIndex(2)">
+            <v-list-item-icon>
+              <v-icon>mdi-code-not-equal-variant</v-icon>
+            </v-list-item-icon>
+
+            <v-list-item-content>
+              <v-list-item-title
+                v-text="$ml.with('VueJS').get(`menuTec`)"
               ></v-list-item-title>
             </v-list-item-content>
           </v-list-item>
@@ -203,14 +203,14 @@ export default {
           await this.sleep(this.sleepTime);
           this.projectMenu = true;
           break;
-        case 1:
+        case 2:
           this.projectMenu = false;
           this.aboutMenu = false;
           this.contactMenu = false;
           await this.sleep(this.sleepTime);
           this.tecMenu = true;
           break;
-        case 2:
+        case 1:
           this.projectMenu = false;
           this.tecMenu = false;
           this.contactMenu = false;

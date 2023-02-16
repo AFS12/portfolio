@@ -28,6 +28,30 @@ export default {
   data: () => ({
     items: [
       {
+        project: "byPrice",
+        workType: true,
+        title: "ByPrice",
+        src: "https://byprice.com.br/",
+        img: "byPrice",
+        images: [
+          {
+            src: require("../assets/byPrice/home.png"),
+          },
+          {
+            src: require("../assets/byPrice/campaign.png"),
+          },
+          {
+            src: require("../assets/byPrice/impressionRow.png"),
+          },
+          {
+            src: require("../assets/byPrice/sideModal.png"),
+          },
+          {
+            src: require("../assets/byPrice/editor.png"),
+          },
+        ],
+      },
+      {
         project: "portalContribuinte",
         workType: true,
         title: "Portal Do Contribuinte",

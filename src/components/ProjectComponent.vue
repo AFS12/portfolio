@@ -12,7 +12,9 @@
           <v-card height="500" :color="opacity">
             <v-expand-x-transition>
               <v-card-text style="color: black" v-show="hover">
-                <v-btn text x-large light class="btnText"><h3>{{ title }}</h3></v-btn>
+                <v-btn text x-large light class="btnText"
+                  ><h3>{{ title }}</h3></v-btn
+                >
                 <p
                   v-show="hover"
                   v-text="$ml.with('VueJS').get(`${work}.summary`)"
@@ -39,9 +41,15 @@
         v-model="dialog"
       >
         <v-card color="#2B2A2A" dark>
-          <ProjectDialog :title="title" :work="work" :images="images" :workType="workType" />
+          <ProjectDialog
+            :title="title"
+            :work="work"
+            :images="images"
+            :workType="workType"
+          />
           <v-card-actions class="justify-end">
-            <v-btn text v-text="$ml.get(`accessBtn`)" @click="workLink(src)"> </v-btn>
+            <v-btn text v-text="$ml.get(`accessBtn`)" @click="workLink(src)">
+            </v-btn>
             <v-spacer></v-spacer>
             <v-btn
               text

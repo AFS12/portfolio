@@ -23,7 +23,7 @@ export default new MLCreate({
             closeBtn: "Close",
             technologiesDescriptionTitle: "Technologies<br>and<br>Experiences",
             technologiesDescriptionStart: "S",
-            technologiesDescription: 'ince the beginning as a web developer, approximately {years} years ago, where since then I have improved my skills with JavaScript/Vue.js and PHP/Laravel. I developed for companies like Unimed and Gespag using Vue.js and Vuetify, acquiring knowledge of the entire ecosystem of the framework such as VueRouter and Vuex.',
+            technologiesDescription: "ince the beginning as a web developer, approximately {years} years ago, where I have since honed my skills with JavaScript/Vue.js, Css/Sass. I developed for companies like Unimed, Gespag and Helioprint using Javascript, Vue.js and Vuetify acquiring knowledge of the entire ecosystem of the framework like VueRouter and Vuex and specializing myself as a front-end developer focused on JavaScript.<br><br>I'm going deeper my knowledge through current methodologies such as clean code, focusing on typescript, system modularization and styling in Sass/Scss.",
             aboutDescriptionTitle: "About Me",
             aboutDescriptionStart: "H",
             aboutDescription: "ey everyone, I'm Arthur Ayres, front-end developer, with experience working on large projects for national companies. Starting in development in 2020, I recognize myself as an enthusiast in modern market technologies, with learning acquired daily. <br><br> I have a focus on development with Javascript, Vue.js, CSS/SASS among other technologies that I use to create high level and value web applications. Currently I'm focused on deepening my knowledge in Javascript and Typescript as well as developing my skills in Node.js through studies.<br><br> I consider myself versatile and efficient in learning new technology and highly adaptable to changes! If I could define myself in 3 words, they would certainly be: optimistic, communicative and proficient!",
@@ -31,6 +31,12 @@ export default new MLCreate({
             contactText: "Contact me through social networks, or if you prefer send a message through the form below",
             descriptionTitle: "Description",
             technologiesTitle: "Technologies used",
+            byPrice: {
+                summary: `Visual recreation of byprice's internal system along with the development of new features`,
+                description: `Refactoring of the project with a new layout and new functionalities still focused on creation through its own editor and management of posters.`,
+                technologiesUsed: "I used the Framework Vue.js focusing on developing a highly componentized system and together with the set of css Vuetify libraries but with customizations of the components in Scss.",
+                technologies: "VUE, VUETIFY",
+            },
             social_network: {
                 summary: `Social network layout based on Facebook`,
                 description: `Project developed for study and self improvement based on Facebook layout.`,
@@ -72,7 +78,7 @@ export default new MLCreate({
             closeBtn: "Fechar",
             technologiesDescriptionTitle: "Tecnologias e<br> Experiências",
             technologiesDescriptionStart: "D",
-            technologiesDescription: 'esde o inicio como desenvolvedor web, a aproximadamente {years} anos, onde desde então aprimorei minhas habilidades com JavaScript/Vue.js e PHP/Laravel. Desenvolvi Para empresas como Unimed e Gespag utilizando Vue.js e Vuetify adquirindo conhecimento de todo o ecosistema do framework como o VueRouter e Vuex.',
+            technologiesDescription: 'esde o inicio como desenvolvedor web, a aproximadamente {years} anos, onde desde então aprimorei minhas habilidades com JavaScript/Vue.js, Css/Sass. Desenvolvi Para empresas como Unimed, Gespag e Helioprint utilizando Javascript, Vue.js e Vuetify adquirindo conhecimento de todo o ecosistema do framework como o VueRouter e Vuex e me especializando como desenvolvedor front-end focado em JavaScript.<br><br>Estou aprofundando meus conhecimentos através de metodologias atuais como clean code, focando em typescript, modularização de sistemas e estilização em Sass/Scss.',
             aboutDescriptionTitle: "Sobre Mim",
             aboutDescriptionStart: "O",
             aboutDescription: "lá a todos, sou Arthur Ayres, desenvolvedor front-end, com experiência de atuação em grandes projetos de empresas nacionais. Iniciando no desenvolvimento em 2020, me reconheço como entusiasta em tecnologias modernas do mercado, com aprendizado adquirido diariamente. <br><br>Possuo foco em desenvolvimento com Javascript, Vue.js, CSS/SASS dentre outras tecnologias que uso para criar aplicações web de alto nível e valor. Atualmente estou focado em aprofundar meus conhecimentos em Javascript e Typescript bem como desenvolver minhas habilidades em Node.js através de estudos. <br><br>Me considero versátil e eficiente em aprender uma nova tecnologia e alta adaptabilidade às mudanças! Se eu pudesse me definir em 3 palavras, certamente seriam: otimista, comunicativo e proficiente!",
@@ -80,6 +86,12 @@ export default new MLCreate({
             contactText: "Entre em contato comigo pelas redes sociais, ou se preferir envie uma mensagem através do formulário abaixo.",
             descriptionTitle: "Descrição",
             technologiesTitle: "Tecnologias usadas",
+            byPrice: {
+                summary: `Recriação visual do sistema interno do byprice junto com o desenvolvimento de novas funcionalidades`,
+                description: `Refatoração do projeto com um novo layout e novas funcionalidades ainda voltadas para a criação através de um editor proprio e gerenciamento de cartazes.`,
+                technologiesUsed: "Utilizei o Framework Vue.js focando em desenvolver um sistema altamente componentizado e junto com o conjunto de biblotecas css Vuetify mas com personalizações dos componentes em Scss.",
+                technologies: "VUE, Vuetify, Css/Scss",
+            },
             social_network: {
                 summary: `Layout de rede social basado no Facebook`,
                 description: `Projeto desenvolvido para estudo e aprimoramento proprio baseado no layout do Facebook.`,

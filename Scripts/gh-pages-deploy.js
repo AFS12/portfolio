@@ -1,13 +1,15 @@
 /* eslint-disable no-console */
-import execa from "execa";
+import { execa } from "execa";
 import fs from "fs";
 (async () => {
   try {
     await execa("git", ["checkout", "--orphan", "gh-pages"]);
     // eslint-disable-next-line no-console
     console.log("Building started...");
+    await execa("cd portfolio");
     await execa("npm", ["run", "build"]);
     // Understand if it's dist or build folder
+    await execa("cd ..");
     const folderName = fs.existsSync("dist") ? "dist" : "build";
     await execa("git", ["--work-tree", folderName, "add", "--all"]);
     await execa("git", ["--work-tree", folderName, "commit", "-m", "gh-pages"]);

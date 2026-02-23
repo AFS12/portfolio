@@ -1,0 +1,65 @@
+{
+  "header": {
+    "about": "Sobre",
+    "experience": "Experiência",
+    "projects": "Projetos",
+    "education": "Educação",
+    "contact": "Contato"
+  },
+  "hero": {
+    "openToWork": "Open to Work",
+    "developer": "Desenvolvedor",
+    "frontEnd": "Front-end Pleno.",
+    "specialistIn": "Especialista em",
+    "and": "e",
+    "description": "Com experiência sólida desde 2020, crio interfaces performáticas e acessíveis. Atualmente expandindo meu stack técnico para o ecossistema Laravel enquanto mantenho foco na experiência do usuário.",
+    "contactMe": "Me mande um email",
+    "linkedin": "LinkedIn"
+  },
+  "projects": {
+    "title": "Projetos em Destaque",
+    "bypriceTitle": "Byprice",
+    "bypriceDescription": "Plataforma de marketing promocional e gestão de ofertas para o varejo. Permite criar, padronizar e distribuir campanhas para encartes, redes sociais, WhatsApp e painéis digitais, centralizando o planejamento e a publicação em múltiplos canais.",
+    "stepfyTitle": "Stepfy",
+    "stepfyDescription": "Plataforma SaaS de gestão de trabalho que organiza tarefas, responsáveis e prazos em um único painel, com templates, automações e integrações para equipes médias e grandes — reduz retrabalho e aumenta a produtividade operacional. Agende uma demonstração para ver fluxos e automações em ação.",
+    "viewCode": "Ver Código",
+    "liveDemo": "Live Demo"
+  },
+  "experience": {
+    "title": "Experiência Profissional",
+    "presente": "Presente",
+    "helyoRole": "Front-end Pleno",
+    "helyoTitle": "Desenvolvimento e Manutenção de Plataformas",
+    "helyoDescription": "Responsável pela arquitetura frontend utilizando Vue.js. Implementação de testes E2E com Cypress garantindo 90% de cobertura de fluxos críticos. Refatoração de código legado para melhorar performance e manutenibilidade.",
+    "gespagRole": "Front-end Jr",
+    "gespagTitle": "Sustentação de Sistemas Legados",
+    "gespagDescription": "Manutenção de sistemas legados e migração gradual de interfaces. Colaboração próxima com designers para implementação fiel de layouts e fluxos de usuário.",
+    "agillRole": "Estagiário",
+    "agillTitle": "Início de Carreira",
+    "agillDescription": "Primeiro contato com desenvolvimento profissional. Auxílio na correção de bugs e implementação de pequenas features em aplicações web."
+  },
+  "education": {
+    "title": "Formação Acadêmica",
+    "estacioTitle": "Estácio de Sá",
+    "estacioCourse": "Análise e Desenvolvimento de Sistemas",
+    "estacioDescription": "Formação focada em engenharia de software, algoritmos e gestão de projetos de TI. Base sólida para resolução de problemas complexos.",
+    "certificationsTitle": "Certificações",
+    "cert1Title": "JavaScript Basic (HackerRank)",
+    "cert1Desc": "Validação de conhecimentos fundamentais da linguagem.",
+    "cert2Title": "Roga DX",
+    "cert2Desc": "Bootcamp intensivo de desenvolvimento frontend moderno.",
+    "cert3Title": "Lógica de Programação",
+    "cert3Desc": "Fundamentos algorítmicos e estruturação de dados."
+  },
+  "technologies": {
+    "title": "Principais Tecnologias",
+    "english": "Inglês Profissional"
+  },
+  "contact": {
+    "title": "Vamos conversar?",
+    "description": "Estou sempre aberto a novas oportunidades e desafios. Se você tem um projeto em mente ou quer apenas bater um papo, entre em contato.",
+    "sendEmail": "Enviar E-mail",
+    "copied": "Email copiado!",
+    "rights": "© 2024 Arthur Ayres. Todos os direitos reservados."
+  }
+}

@@ -1,0 +1,101 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  ::-webkit-scrollbar {
+    width: 8px;
+  }
+  ::-webkit-scrollbar-track {
+    background: #f1f1f1;
+  }
+  .dark ::-webkit-scrollbar-track {
+    background: #0a0a0a;
+  }
+  ::-webkit-scrollbar-thumb {
+    background: #c1c1c1;
+    border-radius: 4px;
+  }
+  .dark ::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 4px;
+  }
+  
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    @apply transition-colors duration-300;
+  }
+}
+
+@layer components {
+  .nav-link {
+    @apply relative;
+  }
+  .nav-link::after {
+    content: "";
+    @apply absolute w-0 h-[2px] -bottom-1 left-0 bg-primary transition-[width] duration-300 ease-out;
+  }
+  .dark .nav-link::after {
+    box-shadow: 0 0 8px rgba(25, 230, 94, 0.5);
+  }
+  .nav-link:hover::after {
+    @apply w-full;
+  }
+
+  .glass-card {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    border: 1px solid rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05), 0 2px 4px -1px rgba(0, 0, 0, 0.03);
+    transition: all 0.3s ease;
+  }
+  .glass-card:hover {
+    background: rgba(255, 255, 255, 0.9);
+    border-color: rgba(25, 230, 94, 0.4);
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.08), 0 0 15px rgba(25, 230, 94, 0.15);
+    transform: translateY(-4px);
+  }
+
+  .dark .glass-card {
+    background: rgba(18, 18, 18, 0.6);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+  }
+  .dark .glass-card:hover {
+    background: rgba(18, 18, 18, 0.8);
+    border-color: rgba(25, 230, 94, 0.3);
+    box-shadow: 0 0 15px rgba(25, 230, 94, 0.1);
+    transform: translateY(-4px);
+  }
+
+  .parallax-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuDooV8Ypg7PoEGN7tcO2NjU5m1KWqSlzm14y5g3MrkI5L8L2xDjgUYh9fPVUt2T1VfqalY58I-ky7G9rnPwlpYaNEMPoeDUfRTN5vURt8H-z72zmHTW_8IizbK9jMcW6OzDb7XiyMltej-wyUFZmpehV8yxQqNk0S-HgLscirquvq8cjSBOUzDSqQqDqnI38l9OsZVjbDcH7Hek-2LFsKPjJIBu8gj5Wh3XiWoW-iLghkvdZRHPo3u5nQ3LFnd3Q-fumfS7otEnesg);
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  .dark .parallax-bg {
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuBjzDkdietP1SZJBDGO0miUQ8cq8X89oxHC_dgmjAHDW6pcxesys6ZFtyT2PNEFIcBpeE1iWE3HxxMmsMKFvT7f3CTqt9i3UAzPPFRp5d2zQNF79X-knjXU2FRKy1nCNQOsvDZ-dysKoG8ETeQjc7_NysbCUNZdqYVcC5qJqBJqnmi4YI4FVIOIvCTHAS3wyDqhA-mO_rFixXEGCeFjLo0Drtr_xFZ6ew2-GtpvWLMk-0_RIm86s3BeVdeoiE3_erfVTgsofwjktdY);
+  }
+}
+
+@layer utilities {
+  .noise-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none;
+    z-index: 9999;
+    opacity: 0.03;
+    background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 200 200' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noiseFilter'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='3' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noiseFilter)' opacity='1'/%3E%3C/svg%3E");
+  }
+  .duration-10000 {
+    animation-duration: 10000ms;
+  }
+}

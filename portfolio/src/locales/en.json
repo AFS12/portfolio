@@ -1,0 +1,65 @@
+{
+    "header": {
+        "about": "About",
+        "experience": "Experience",
+        "projects": "Projects",
+        "education": "Education",
+        "contact": "Contact"
+    },
+    "hero": {
+        "openToWork": "Open to Work",
+        "developer": "Mid-level",
+        "frontEnd": "Front-end Developer.",
+        "specialistIn": "Specialist in",
+        "and": "and",
+        "description": "With solid experience since 2020, I create performant and accessible interfaces. Currently expanding my tech stack to the Laravel ecosystem while keeping a strong focus on user experience.",
+        "contactMe": "Contact Me",
+        "linkedin": "LinkedIn"
+    },
+    "projects": {
+        "title": "Featured Projects",
+        "bypriceTitle": "Byprice",
+        "bypriceDescription": "A promotional marketing and offer management platform for the retail sector. It allows you to create, standardize, and distribute campaigns for flyers, social media, WhatsApp, and digital signage, centralizing planning and publication across multiple channels.",
+        "stepfyTitle": "Stepfy",
+        "stepfyDescription": "A workflow-management SaaS that centralizes tasks, owners and deadlines in a single dashboard, offering templates, automations and integrations for mid-to-large teams — reduces rework and boosts operational productivity. Schedule a demo to see flows and automations in action.",
+        "viewCode": "View Code",
+        "liveDemo": "Live Demo"
+    },
+    "experience": {
+        "title": "Professional Experience",
+        "presente": "Present",
+        "helyoRole": "Mid-level Front-end",
+        "helyoTitle": "Platform Development and Maintenance",
+        "helyoDescription": "Responsible for frontend architecture using Vue.js. Implemented E2E testing with Cypress ensuring 90% coverage of critical flows. Refactored legacy code to improve performance and maintainability.",
+        "gespagRole": "Jr Front-end",
+        "gespagTitle": "Legacy System Support",
+        "gespagDescription": "Maintenance of legacy systems and gradual interface migration. Close collaboration with designers for faithful implementation of layouts and user flows.",
+        "agillRole": "Intern",
+        "agillTitle": "Career Start",
+        "agillDescription": "First contact with professional development. Assisted in bug fixes and implementing small features in web applications."
+    },
+    "education": {
+        "title": "Academics",
+        "estacioTitle": "Estácio de Sá",
+        "estacioCourse": "Systems Analysis and Development",
+        "estacioDescription": "Degree focused on software engineering, algorithms, and IT project management. Solid foundation for complex problem solving.",
+        "certificationsTitle": "Certifications",
+        "cert1Title": "JavaScript Basic (HackerRank)",
+        "cert1Desc": "Validation of fundamental programming language knowledge.",
+        "cert2Title": "Roga DX",
+        "cert2Desc": "Intensive bootcamp on modern frontend development.",
+        "cert3Title": "Programming Logic",
+        "cert3Desc": "Algorithmic foundations and data structuring."
+    },
+    "technologies": {
+        "title": "Main Technologies",
+        "english": "Professional English"
+    },
+    "contact": {
+        "title": "Let's talk?",
+        "description": "I'm always open to new opportunities and challenges. Whether you have a project in mind or just want to chat, feel free to reach out.",
+        "sendEmail": "Send Email",
+        "copied": "Email copied!",
+        "rights": "© 2024 Arthur Ayres. All rights reserved."
+    }
+}

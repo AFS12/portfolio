@@ -15,13 +15,18 @@
         <button @click="toggleLocale" aria-label="Toggle language" class="text-text-muted dark:text-slate-400 hover:text-text-main dark:hover:text-white transition-colors p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 font-bold text-sm w-10 flex items-center justify-center">
           {{ currentLocale.toUpperCase() }}
         </button>
-        <button @click="$emit('toggle-theme')" aria-label="Toggle theme" class="text-text-muted dark:text-slate-400 hover:text-text-main dark:hover:text-white transition-colors p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5">
+        <button @click="$emit('toggle-theme')" aria-label="Toggle theme" class="text-text-muted dark:text-slate-400 hover:text-text-main dark:hover:text-white transition-colors p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 font-bold text-sm w-10 flex items-center justify-center">
           <span class="material-symbols-outlined text-[20px]">{{ isDark ? 'dark_mode' : 'light_mode' }}</span>
         </button>
       </nav>
-      <button class="md:hidden text-text-main dark:text-white p-2">
-        <span class="material-symbols-outlined">menu</span>
-      </button>
+      <nav class="md:hidden flex items-center gap-2 text-text-main dark:text-white p-2">
+        <button @click="toggleLocale" aria-label="Toggle language" class="text-text-muted dark:text-slate-400 hover:text-text-main dark:hover:text-white transition-colors p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 font-bold text-sm w-10 flex items-center justify-center">
+          {{ currentLocale.toUpperCase() }}
+        </button>
+        <button @click="$emit('toggle-theme')" aria-label="Toggle theme" class="text-text-muted dark:text-slate-400 hover:text-text-main dark:hover:text-white transition-colors p-2 rounded-full hover:bg-black/5 dark:hover:bg-white/5 font-bold text-sm w-10 flex items-center justify-center">
+          <span class="material-symbols-outlined text-[20px]">{{ isDark ? 'dark_mode' : 'light_mode' }}</span>
+        </button>
+      </nav>
     </div>
   </header>
 </template>
